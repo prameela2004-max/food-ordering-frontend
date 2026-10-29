@@ -1,16 +1,80 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# 🍔 Foodly — Food Ordering Platform
 
-Currently, two official plugins are available:
+A food ordering web application built with React and Spring Boot, featuring restaurant browsing, menu filtering, cart management, and order placement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- Browse restaurants and their menus
+- Filter biryanis and starters by vegetarian and non-vegetarian options
+- View food item descriptions, prices, and images
+- Add items to the shopping cart
+- Review orders and proceed through the checkout flow
+- User login and registration
+- Responsive user interface
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- JavaScript
+- HTML and CSS
+- Axios
+- React Router
+- Spring Boot REST API
+- MySQL
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📁 Project Structure
+
+```text
+food-ordering-frontend/
+├── public/
+│   └── food/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
+
+## 🚀 Run Locally
+
+### Prerequisites
+
+- Node.js and npm
+- Foodly Spring Boot backend, if using the API features
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/prameela2004-max/food-ordering-frontend.git
+cd food-ordering-frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal, usually `http://localhost:5173`.
+
+## 🔗 Backend Repository
+
+[Foodly Spring Boot Backend](https://github.com/prameela2004-max/food-ordering-backend)
+
+## 👨‍💻 About
+
+Foodly is a full-stack learning project demonstrating frontend development, REST API integration, authentication, and food ordering workflows.
