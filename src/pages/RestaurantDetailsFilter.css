@@ -1,0 +1,26 @@
+
+.biryaniTypeFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.biryaniTypeFilters button {
+  padding: 12px 22px;
+  border: 1px solid #eaded6;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #40352f;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.biryaniTypeFilters button:hover,
+.biryaniTypeFilters button.active {
+  background: #ff5a1f;
+  border-color: #ff5a1f;
+  color: #ffffff;
+}

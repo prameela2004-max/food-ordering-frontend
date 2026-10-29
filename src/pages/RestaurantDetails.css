@@ -1,0 +1,117 @@
+/* Veg / Non-Veg biryani filter buttons */
+.biryaniTypeFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.biryaniTypeFilters button {
+  padding: 12px 22px;
+  border: 1px solid #eaded6;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #40352f;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.biryaniTypeFilters button:hover,
+.biryaniTypeFilters button.active {
+  background: #ff5a1f;
+  border-color: #ff5a1f;
+  color: #ffffff;
+}
+
+.biryaniTypeFilters button:focus-visible {
+  outline: 3px solid rgba(255, 90, 31, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .biryaniTypeFilters {
+    gap: 8px;
+  }
+
+  .biryaniTypeFilters button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+.foodCardImage {
+  width: 225px;
+  min-width: 225px;
+  height: 225px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff0e6;
+}
+
+.foodCardImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foodItemImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff0e6;
+}
+
+.foodItemImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foodItemImage .foodUnavailable {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 600;
+}
+
+/* Add these rules to src/pages/RestaurantDetails.css so failed images have a polished fallback. */
+.foodItemImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foodImageFallback {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #fff0df 0%, #ffe0ca 100%);
+  color: #8c5a3c;
+}
+
+.foodImageFallback span {
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1;
+}
+
+.foodImageFallback small {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}

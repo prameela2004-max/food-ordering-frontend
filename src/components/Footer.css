@@ -1,0 +1,103 @@
+/* Shared Foodly footer — used across all routes */
+.foodlyFooter {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  padding: 46px clamp(20px, 5vw, 72px) 22px;
+  background: #201b18;
+  color: #f8f4f0;
+}
+
+.foodlyFooter * { box-sizing: border-box; }
+
+.foodlyFooter__inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 48px;
+  row-gap: 30px;
+  align-items: center;
+}
+
+.foodlyFooter__brand { min-width: 0; }
+
+.foodlyFooter__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 29px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.foodlyFooter__logoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(255, 90, 31, 0.16);
+  font-size: 25px;
+}
+
+.foodlyFooter__brand p {
+  margin: 12px 0 0;
+  max-width: 390px;
+  color: #c6bbb3;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.foodlyFooter__nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.foodlyFooter__nav a {
+  color: #e8dfd8;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.foodlyFooter__nav a:hover,
+.foodlyFooter__nav a:focus-visible {
+  color: #ff7547;
+  transform: translateY(-1px);
+}
+
+.foodlyFooter__bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a99d95;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.foodlyFooter__madeWith { color: #c6bbb3; white-space: nowrap; }
+.foodlyFooter__madeWith span { color: #ff7547; }
+
+@media (max-width: 700px) {
+  .foodlyFooter { padding: 34px 22px 19px; }
+  .foodlyFooter__inner { grid-template-columns: 1fr; gap: 22px; }
+  .foodlyFooter__logo { font-size: 26px; }
+  .foodlyFooter__logoIcon { width: 40px; height: 40px; }
+  .foodlyFooter__nav { justify-content: flex-start; gap: 12px 22px; }
+  .foodlyFooter__bottom { flex-direction: column; align-items: flex-start; gap: 5px; padding-top: 17px; }
+  .foodlyFooter__madeWith { white-space: normal; }
+}

@@ -1,0 +1,341 @@
+.popular-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  color: #222;
+  background: #fffaf5;
+  overflow-x: clip;
+}
+
+.popular-page,
+.popular-page * {
+  box-sizing: border-box;
+}
+
+.popular-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 88px;
+  padding: 14px clamp(20px, 5vw, 76px);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.popular-logo {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #222;
+  font-size: clamp(24px, 2.3vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.popular-logo span {
+  font-size: 0.95em;
+}
+
+.popular-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 3.5vw, 54px);
+}
+
+.popular-nav-link {
+  color: #555;
+  font-size: clamp(16px, 1.5vw, 21px);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+
+.popular-nav-link:hover,
+.popular-nav-link.active {
+  color: #ff5a1f;
+}
+
+.popular-nav-link.active {
+  font-weight: 750;
+}
+
+.popular-login-wrap {
+  justify-self: end;
+}
+
+.popular-login-button {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: #ff5a1f;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.popular-login-button:hover {
+  background: #ed4b12;
+  transform: translateY(-1px);
+}
+
+.popular-hero {
+  width: 100%;
+  padding: clamp(42px, 5vw, 68px) 20px clamp(40px, 4.5vw, 60px);
+  text-align: center;
+  background: linear-gradient(135deg, #fff1d6 0%, #ffe2d4 100%);
+}
+
+.popular-eyebrow {
+  margin: 0 0 8px;
+  color: #ff5a1f;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.popular-title {
+  margin: 0;
+  color: #222;
+  font-size: clamp(36px, 4.3vw, 58px);
+  font-weight: 750;
+  line-height: 1.12;
+}
+
+.popular-subtitle {
+  max-width: 700px;
+  margin: 12px auto 0;
+  color: #666;
+  font-size: clamp(17px, 1.8vw, 23px);
+  line-height: 1.5;
+}
+
+.popular-main {
+  width: calc(100% - 48px);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(40px, 5.5vw, 76px) 0 clamp(56px, 6vw, 88px);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 28px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.popular-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(45, 30, 15, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.popular-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(45, 30, 15, 0.12);
+}
+
+.popular-card-image {
+  display: flex;
+  min-height: 220px;
+  aspect-ratio: 1.4 / 1;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff0d2 0%, #ffdfc8 100%);
+}
+
+.popular-card-image span {
+  font-size: clamp(76px, 8vw, 112px);
+  line-height: 1;
+}
+
+.popular-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px 28px 28px;
+  text-align: center;
+}
+
+.popular-food-name {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.popular-rating {
+  margin: 8px 0 18px;
+  color: #ff9800;
+  font-size: 19px;
+}
+
+.popular-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 12px;
+  text-align: left;
+}
+
+.popular-price {
+  color: #222;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.popular-add-button {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: #ff5a1f;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.popular-add-button:hover {
+  background: #ed4b12;
+  transform: scale(1.05);
+}
+
+.popular-add-button:focus-visible,
+.popular-login-button:focus-visible,
+.popular-nav-link:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 3px;
+}
+
+.popular-footer {
+  padding: 42px 20px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.popular-footer h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.popular-footer p {
+  margin: 8px 0 0;
+  color: #e7e7e7;
+  line-height: 1.5;
+}
+
+@media (max-width: 950px) {
+  .popular-navbar {
+    grid-template-columns: 1fr auto;
+    row-gap: 14px;
+  }
+
+  .popular-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    order: 3;
+    padding-bottom: 4px;
+  }
+
+  .popular-login-wrap {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .popular-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .popular-navbar {
+    min-height: auto;
+    padding: 16px 18px;
+    gap: 16px 10px;
+  }
+
+  .popular-logo {
+    font-size: 25px;
+  }
+
+  .popular-login-button {
+    min-height: 44px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
+  .popular-nav {
+    gap: clamp(16px, 5vw, 28px);
+    flex-wrap: wrap;
+  }
+
+  .popular-nav-link {
+    font-size: 16px;
+  }
+
+  .popular-hero {
+    padding: 38px 18px 42px;
+  }
+
+  .popular-eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .popular-main {
+    width: calc(100% - 32px);
+    padding: 32px 0 52px;
+  }
+
+  .popular-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .popular-card-image {
+    min-height: 190px;
+  }
+
+  .popular-card-image span {
+    font-size: 90px;
+  }
+
+  .popular-card-content {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,480 @@
+
+.restaurantsPage {
+    min-height: 100vh;
+    color: #241b17;
+    background: #fffaf6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.restaurantsNavbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #f1e9e3;
+    box-shadow: 0 3px 14px rgba(50, 30, 15, 0.04);
+}
+
+.restaurantsLogo,
+.footerLogo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #241b17;
+    font-size: 29px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logoIcon {
+    color: #ff5a1f;
+}
+
+.restaurantsNavLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+}
+
+.restaurantsNavLinks a {
+    color: #625953;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.restaurantsNavLinks a:hover,
+.restaurantsNavLinks a.activeNavLink {
+    color: #ff5a1f;
+}
+
+.restaurantsLoginButton,
+.heroButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 23px;
+    color: #fff;
+    background: #ff5a1f;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 750;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.restaurantsLoginButton:hover,
+.heroButton:hover {
+    background: #e94b14;
+    transform: translateY(-2px);
+}
+
+.restaurantsHero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 370px;
+    padding: 65px max(7%, calc((100% - 1200px) / 2));
+    overflow: hidden;
+    background: linear-gradient(120deg, #fff0d6, #ffe4d7 65%, #ffede2);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.restaurantsEyebrow,
+.sectionEyebrow {
+    display: inline-block;
+    color: #ff5a1f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+}
+
+.restaurantsHero h1 {
+    margin: 20px 0 14px;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    font-weight: 850;
+}
+
+.restaurantsHero h1 span {
+    color: #ff5a1f;
+}
+
+.restaurantsHero p {
+    max-width: 510px;
+    margin: 0 0 27px;
+    color: #70635b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.heroFoodDecoration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 270px;
+    width: 270px;
+    height: 270px;
+    margin-right: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 15px 45px rgba(160, 87, 42, 0.12);
+}
+
+.heroFoodEmoji {
+    font-size: 125px;
+}
+
+.floatingFood {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(50, 30, 15, 0.12);
+    font-size: 34px;
+}
+
+.foodOne {
+    top: 0;
+    right: 4px;
+}
+
+.foodTwo {
+    bottom: 4px;
+    left: -5px;
+}
+
+.foodThree {
+    right: -20px;
+    bottom: 65px;
+}
+
+.restaurantsMain {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 65px 35px 90px;
+    scroll-margin-top: 100px;
+}
+
+.restaurantsSectionHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.restaurantsSectionHeading h2 {
+    margin: 10px 0;
+    color: #241b17;
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -1px;
+}
+
+.restaurantsSectionHeading p {
+    margin: 0;
+    color: #82766e;
+    font-size: 16px;
+}
+
+.restaurantCount {
+    padding: 10px 15px;
+    color: #9b4b2d;
+    background: #fff0e8;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.restaurantsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 30px;
+}
+
+.restaurantsMessage {
+    display: flex;
+    min-height: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #74675f;
+    text-align: center;
+}
+
+.restaurantsMessage > span:not(.loadingSpinner) {
+    font-size: 38px;
+}
+
+.restaurantsMessage p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.loadingSpinner {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #ffe0d2;
+    border-top-color: #ff5a1f;
+    border-radius: 50%;
+    animation: restaurantSpin 0.8s linear infinite;
+}
+
+@keyframes restaurantSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.errorMessage {
+    color: #b42318;
+}
+
+.retryButton {
+    padding: 10px 18px;
+    color: white;
+    background: #ff5a1f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.restaurantsFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 7%;
+    background: #fff;
+    border-top: 1px solid #f0e8e3;
+}
+
+.footerLogo {
+    font-size: 22px;
+}
+
+.restaurantsFooter p,
+.restaurantsFooter > span {
+    color: #82766e;
+    font-size: 14px;
+}
+
+@media (max-width: 950px) {
+    .restaurantsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .restaurantsHero {
+        padding: 55px 6%;
+    }
+
+    .heroFoodDecoration {
+        flex-basis: 210px;
+        width: 210px;
+        height: 210px;
+        margin-right: 15px;
+    }
+
+    .heroFoodEmoji {
+        font-size: 95px;
+    }
+
+    .restaurantsNavLinks {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .restaurantsNavbar {
+        min-height: 72px;
+        padding: 12px 5%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .restaurantsLogo {
+        font-size: 24px;
+    }
+
+    .restaurantsNavLinks {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        padding: 8px 0 4px;
+    }
+
+    .restaurantsNavLinks a {
+        font-size: 14px;
+    }
+
+    .restaurantsLoginButton {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .restaurantsHero {
+        min-height: auto;
+        padding: 48px 7%;
+    }
+
+    .restaurantsHero h1 {
+        font-size: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .restaurantsHero p {
+        font-size: 15px;
+    }
+
+    .heroFoodDecoration {
+        display: none;
+    }
+
+    .restaurantsMain {
+        padding: 42px 18px 60px;
+    }
+
+    .restaurantsSectionHeading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .restaurantsGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .restaurantsFooter {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+.restaurantCardLink {
+    display: block;
+    min-width: 0;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.restaurantCard {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f0e7e1;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(53, 34, 20, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.restaurantCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(53, 34, 20, 0.14);
+}
+
+.restaurantCardImage {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #fff0e8;
+}
+
+.restaurantCardImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.restaurantImageFallback {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    font-size: 65px;
+    background: linear-gradient(135deg, #fff0e8, #ffe0cf);
+}
+
+.restaurantImageBadge {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.restaurantCardContent {
+    padding: 23px 20px 25px;
+    text-align: center;
+}
+
+.restaurantCardContent h3 {
+    margin: 0 0 12px;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.restaurantDescription {
+    min-height: 44px;
+    margin: 0 0 15px;
+    color: #776c65;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.restaurantLocation {
+    margin: 12px 0;
+    color: #71655e;
+    font-size: 14px;
+}
+
+.restaurantStatus {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.restaurantStatus.isOpen {
+    color: #087443;
+    background: #d9f4e4;
+}
+
+.restaurantStatus.isClosed {
+    color: #a52a2a;
+    background: #fde2e2;
+}
